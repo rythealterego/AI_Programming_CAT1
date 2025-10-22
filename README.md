@@ -17,6 +17,3 @@ It demonstrates how to create a local repository, commit files, and push changes
 
 ## Author
 Ryan Gakinya
-Step 3: Initialize Local Git Repository
-Open VS Code
-
