@@ -1,0 +1,21 @@
+from math import pi
+
+def area_of_circle(radius):
+    """
+    Calculates the area of a circle given its radius.
+    Validates that the radius is greater than 0.
+    Returns the area rounded to 2 decimal places.
+    """
+    if radius <= 0:
+        return "Invalid radius. Radius must be greater than 0."
+    
+    area = pi * (radius ** 2)
+    return round(area, 2)
+
+# Ask the user for input
+try:
+    radius = float(input("Enter the radius of the circle: "))
+    result = area_of_circle(radius)
+    print("Area of the circle:", result)
+except ValueError:
+    print("Invalid input. Please enter a numeric value for the radius.")

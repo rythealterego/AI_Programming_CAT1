@@ -1,0 +1,26 @@
+def save_to_file(students):
+    with open("students.txt", "w") as file:
+        for s in students:
+            file.write(f"{s['name']} | {s['student_id']} | {s['favorite_AI_tool']}\n")
+
+students = []
+
+while True:
+    name = input("Enter student name (or 'q' to quit): ")
+    if name.lower() == 'q':
+        break
+    student_id = input("Enter student ID: ")
+    favorite_AI_tool = input("Enter favorite AI tool: ")
+
+    student = {
+        "name": name,
+        "student_id": student_id,
+        "favorite_AI_tool": favorite_AI_tool
+    }
+    students.append(student)
+
+print(f"\nTotal students: {len(students)}")
+for s in students:
+    print(f"Name: {s['name']}, ID: {s['student_id']}, Favorite Tool: {s['favorite_AI_tool']}")
+
+save_to_file(students)
